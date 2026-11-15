@@ -1,0 +1,130 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --red: #c51f45;
+  --pink: #f51d50;
+  --green: #00f20a;
+}
+
+html, body {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #fff;
+  color: #090909;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.page {
+  width: min(100% - 24px, 520px);
+  margin: 12px auto 28px;
+  text-align: center;
+}
+
+h1 {
+  margin: 0 0 16px;
+  font-size: clamp(19px, 5.4vw, 25px);
+  line-height: 1.15;
+  font-weight: 900;
+  letter-spacing: -.45px;
+}
+
+h1 span, .red {
+  color: var(--red);
+}
+
+.check-panel {
+  height: clamp(178px, 53vw, 250px);
+  width: 100%;
+  display: grid;
+  place-items: center;
+  background: #000;
+  border-radius: 13px;
+  margin-bottom: 17px;
+}
+
+.check-icon {
+  width: clamp(105px, 32vw, 145px);
+  aspect-ratio: 1;
+  border: 7px solid var(--green);
+  border-radius: 14px;
+  box-shadow: 0 0 5px 2px rgba(0, 255, 0, .85), inset 0 0 5px rgba(0, 255, 0, .3);
+  display: grid;
+  place-items: center;
+}
+
+.check-icon svg {
+  width: 88%;
+  height: 88%;
+  overflow: visible;
+}
+
+.check-icon path {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 11;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.instructions p {
+  margin: 0;
+  font-size: clamp(17px, 5vw, 23px);
+  line-height: 1.2;
+  font-weight: 900;
+}
+
+.instructions small {
+  display: block;
+  margin-top: 2px;
+  color: #777;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.instructions .step-two {
+  margin-top: 10px;
+}
+
+.telegram-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 51px;
+  width: 100%;
+  margin-top: 27px;
+  padding: 12px 18px;
+  border: 1px solid #d70d40;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #ff285e 0%, #ed174b 100%);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .15), inset 0 1px 0 rgba(255,255,255,.22);
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 900;
+  letter-spacing: .1px;
+  transition: transform .15s ease, filter .15s ease;
+}
+
+.telegram-button:hover {
+  filter: brightness(1.04);
+}
+
+.telegram-button:active {
+  transform: scale(.985);
+}
+
+.telegram-button:focus-visible {
+  outline: 3px solid #111;
+  outline-offset: 3px;
+}
+
+@media (min-width: 600px) {
+  .page {
+    margin-top: 28px;
+  }
+}
